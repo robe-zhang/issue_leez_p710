@@ -1,0 +1,15 @@
+修复 leez P710 千兆网口丢包率高的 patch
+
+kernel/arch/arm64/boot/dts/rockchip/rk3399-p710.dtsi
+        assigned-clock-parents = <&clkin_gmac>;
+        pinctrl-names = "default";
+        pinctrl-0 = <&rgmii_pins>;
+-       tx_delay = <0x28>;
+-       rx_delay = <0x11>;
++       tx_delay = <0x23>;
++       rx_delay = <0x09>;
+        status = "okay";
+};
+
+
+
